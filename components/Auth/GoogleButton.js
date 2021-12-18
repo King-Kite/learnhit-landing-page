@@ -9,7 +9,7 @@ const iconStyle =
 
 const Button = ({ loading, setMessage, setType }) => {
 
-    const { authDispatch, loginDispatch, registerDispatch } = useContext(GlobalContext);
+    const { registerDispatch } = useContext(GlobalContext);
 
     const onSuccess = useCallback((response) => {
         if (response.accessToken !== null && response.accessToken !== undefined && response.tokenId !== null && response.tokenId !== undefined) {
@@ -22,9 +22,9 @@ const Button = ({ loading, setMessage, setType }) => {
                     setMessage("User Registered Successfully")
                     setType("success");
                 }
-            })(loginDispatch, authDispatch, registerDispatch)
+            })(registerDispatch)
         }
-    }, [authDispatch, loginDispatch, setMessage, setType, registerDispatch])
+    }, [setMessage, setType, registerDispatch])
 
     const onFail = useCallback((response) => {
         setMessage(response?.error || "An error occurred",);

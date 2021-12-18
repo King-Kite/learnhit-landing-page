@@ -1,19 +1,15 @@
 import { NEXT_SOCIAL_GOOGLE_LOGIN_URL } from "../../../config";
 import {
-    AUTH_SUCCESS,
-    AUTH_LOGIN_FAILED,
-    AUTH_LOGIN_LOADING,
-    AUTH_LOGIN_SUCCESS,
+    AUTH_REGISTER_LOADING,
+    AUTH_REGISTER_FAILED,
     AUTH_REGISTER_SUCCESS,
 } from "../types";
 
 const loginSocialAccount = ({ accessToken, platform, tokenId, onSuccess }) => async (
-    dispatch,
-    authDispatch,
-    registerDispatch
+    dispatch
 ) => {
     dispatch({
-        type: AUTH_LOGIN_LOADING,
+        type: AUTH_REGISTER_LOADING,
     });
 
     const body = JSON.stringify({ accessToken, tokenId });
@@ -36,26 +32,19 @@ const loginSocialAccount = ({ accessToken, platform, tokenId, onSuccess }) => as
 
         if (response.status === 200) {
             dispatch({
-                type: AUTH_LOGIN_SUCCESS,
+                type: AUTH_REGISTER_SUCCESS,
                 payload: data,
             });
-            authDispatch({
-                type: AUTH_SUCCESS,
-            });
-            registerDispatch({
-                type: AUTH_REGISTER_SUCCESS,
-                payload: data
-            })
             if (onSuccess && onSuccess !== undefined) onSuccess(data?.success || "Signed Up Successfully")
         } else {
             dispatch({
-                type: AUTH_LOGIN_FAILED,
+                type: AUTH_REGISTER_FAILED,
                 payload: data,
             });
         }
     } catch (error) {
         dispatch({
-            type: AUTH_LOGIN_FAILED,
+            type: AUTH_REGISTER_FAILED,
             payload:
                 error?.message ||
                 `an action went wrong when trying to login to ${platform} account`,
