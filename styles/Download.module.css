@@ -1,0 +1,27 @@
+.container {
+  height: 40vh;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100vw;
+  position: relative;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    height: 50vh;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .container {
+    height: 60vh;
+  }
+}

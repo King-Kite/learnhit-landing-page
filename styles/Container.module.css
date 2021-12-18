@@ -1,0 +1,5 @@
+@media all and (max-width: 400px) {
+	.lineWidth {
+		max-width: 200px;
+	}
+}

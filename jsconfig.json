@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"jsx": "preserve",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["*"], // This path here is enough for NextJs but i'm gonna add the other folders just incase some problems arise with auto imports or F12 look up
+			"@/components/*": ["components/*"],
+			"@/config/*": ["config/*"],
+			"@/hooks/*": ["hooks/*"],
+			"@/Layout/*": ["Layout/*"],
+			"@/store/*": ["store/*"],
+			"@/styles/*": ["styles/*"],
+			"@/utils/*": ["utils/*"],
+		}
+	},
+	"exclude": ["node_modules", ".next"]
+}

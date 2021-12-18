@@ -1,0 +1,33 @@
+.sidebar {
+	width: 83.333333%;
+}
+
+@media all and (min-width: 500px) {
+	.sidebar {
+		width: 70%;
+	}
+}
+
+@media all and (min-width: 640px) {
+	.sidebar {
+		width: 60%;
+	}
+}
+
+@media all and (min-width: 768px) {
+	.sidebar {
+		width: 50%;
+	}
+}
+
+@media all and (min-width: 900px) {
+	.sidebar {
+		width: 45%;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.sidebar {
+		width: 20%;
+	}
+}

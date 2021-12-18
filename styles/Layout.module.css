@@ -1,0 +1,15 @@
+.container {
+  padding-top: 56px;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    padding-top: 71.5px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .container {
+    padding-top: 79.5px;
+  }
+}
