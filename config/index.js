@@ -36,6 +36,7 @@ export const REVIEW_COURSES_URL = (slug) =>
 	`${API_URL}/reviews/courses/${slug}/`;
 export const REVIEW_COURSES_DETAIL_URL = (id) =>
 	`${API_URL}/review/course/${id}/`;
+export const SOCIAL_FACEBOOK_LOGIN_URL = `${API_URL}/auth/social/facebook/login/`;
 export const SOCIAL_GOOGLE_LOGIN_URL = `${API_URL}/auth/social/google/login/`;
 export const USER_DATA_URL = `${API_URL}/auth/user/`;
 export const VERIFY_TOKEN_URL = `${API_URL}/api/token/verify/`;
@@ -58,6 +59,7 @@ export const NEXT_PASSWORD_RESET_CONFIRM_URL =
 export const NEXT_PASSWORD_RESET_CONFIRM_UID_TOKEN_URL = `${NEXT_API_URL}/api/account/password/reset/confirm_uid_token/`;
 export const NEXT_REGISTER_URL = "/api/account/register";
 export const NEXT_REVIEW_COURSES_URL = "/api/reviews/courses";
+export const NEXT_SOCIAL_FACEBOOK_LOGIN_URL = "/api/account/social/facebook";
 export const NEXT_SOCIAL_GOOGLE_LOGIN_URL = "/api/account/social/google";
 export const NEXT_USER_DATA_URL = "/api/account/user";
 export const NEXT_VERIFY_TOKEN_URL = "/api/account/verify";

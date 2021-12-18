@@ -1,3 +1,4 @@
+import FacebookLogin from "./FacebookButton";
 import GoogleLogin from "./GoogleButton";
 import CustomLink from "./Link";
 import { LOGIN_PAGE_URL } from "../../config";
@@ -18,10 +19,8 @@ const Signup = ({ Alert, setMessage, setType, error, errors, form, loading, onCh
                     <div>
                         <GoogleLogin loading={loading} setMessage={setMessage} setType={setType} />
                     </div>
-                    <div
-                        className={`${iconStyle} bg-blue-600 px-5 hover:bg-blue-500`}
-                    >
-                        <i className="fab fa-facebook-f" />
+                    <div>
+                        <FacebookLogin loading={loading} setMessage={setMessage} setType={setType} />
                     </div>
                 </div>
             </div>
